@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solana Mythology - The Divine Pantheon of Crypto</title>
+    <link rel="icon" href="Solana_logo.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Custom Styles */
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap');
+        
+        :root {
+            --solana-purple: #9945FF;
+            --solana-green: #14F195;
+            --dark-bg: #0A0F1C;
+            --temple-gold: #F0C15C;
+        }
+        
+        body {
+            font-family: 'Raleway', sans-serif;
+            background-color: var(--dark-bg);
+            background-image: url('bg.png');
+            background-attachment: fixed;
+            color: white;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Cinzel', serif;
+        }
+        
+        .title-gradient {
+            background: linear-gradient(90deg, var(--solana-purple) 0%, var(--solana-green) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .solana-gradient {
+            background: linear-gradient(90deg, var(--solana-purple) 0%, var(--solana-green) 100%);
+        }
+        
+        .gold-gradient {
+            background: linear-gradient(90deg, #F0C15C 0%, #FFE08A 100%);
+        }
+        
+        .temple-bg {
+            background-image: url('images/greek-temple.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .god-card {
+            transition: all 0.3s ease;
+            background: rgba(10, 15, 28, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(240, 193, 92, 0.3);
+        }
+        
+        .god-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(240, 193, 92, 0.2);
+            border: 1px solid rgba(240, 193, 92, 0.6);
+        }
+        
+        .god-image {
+            filter: drop-shadow(0 0 8px rgba(240, 193, 92, 0.5));
+        }
+        
+        .greek-border {
+            border-image: url('images/greek-pattern.png') 30 round;
+            border-width: 10px;
+            border-style: solid;
+        }
+        
+        .column {
+            position: relative;
+        }
+        
+        .column::before, .column::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 20px;
+            background-image: url('images/column.png');
+            background-size: contain;
+            background-repeat: repeat-y;
+        }
+        
+        .column::before {
+            left: -20px;
+        }
+        
+        .column::after {
+            right: -20px;
+        }
+        
+        /* Animated stars */
+        .star {
+            position: absolute;
+            background-color: white;
+            border-radius: 50%;
+            animation: twinkle 4s infinite;
+        }
+        
+        @keyframes twinkle {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+        
+        /* Scrollbar styling */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: var(--dark-bg);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(var(--solana-purple), var(--solana-green));
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Stars background animation -->
+    <div id="stars-container" class="fixed inset-0 z-0"></div>
+    
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-opacity-80 backdrop-filter backdrop-blur-lg z-50 border-b border-opacity-20 border-yellow-300">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <img src="Solana_logo.png" alt="Solana Logo" class="h-8 mr-3">
+                    <span class="text-2xl font-bold title-gradient">Solana Mythology</span>
+                </div>
+                
+                <div class="hidden md:flex space-x-10">
+                    <a href="#pantheon" class="text-white hover:text-yellow-300 transition font-medium">The Pantheon</a>
+                    <a href="#stories" class="text-white hover:text-yellow-300 transition font-medium">Mythical Stories</a>
+                    <a href="#artifacts" class="text-white hover:text-yellow-300 transition font-medium">Divine Artifacts</a>
+                    <a href="#prophecies" class="text-white hover:text-yellow-300 transition font-medium">Prophecies</a>
+                </div>
+                
+                <div>
+                    <a href="https://pump.fun/coin/ca" class="gold-gradient px-5 py-2 rounded-lg font-semibold text-gray-900 hover:opacity-90 transition">Buy Now</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen temple-bg flex items-center pt-20">
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div class="container mx-auto px-6 z-10 py-20">
+            <div class="max-w-3xl mx-auto text-center">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 title-gradient">The Divine Pantheon</h1>
+                <p class="text-xl mb-10 text-gray-300">CA: tbd</p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="#pantheon" class="solana-gradient px-8 py-3 rounded-lg font-semibold text-white hover:opacity-90 transition">
+                        <i class="fas fa-bolt mr-2"></i>Meet The Gods
+                    </a>
+                    <a href="#stories" class="bg-transparent border-2 border-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition">
+                        <i class="fas fa-book-open mr-2"></i>Read The Myths
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pantheon Introduction -->
+    <section class="py-20 bg-gray-900 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <img src="images/constellation-map.png" alt="Constellation Map" class="w-full h-full object-cover">
+        </div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-4xl mx-auto text-center mb-16">
+                <h2 class="text-4xl font-bold mb-6 title-gradient">The Cosmic Order</h2>
+                <p class="text-xl text-gray-300">In the beginning, there was chaos. Then, out of the void emerged the primordial forces that would shape the Solana cosmos. These divine beings, with their immense power and complex relationships, created the world of memecoins as we know it today.</p>
+                <div class="mt-10 p-6 greek-border inline-block bg-gray-900 bg-opacity-80">
+                    <p class="italic text-gray-300">"As above in Mount Solaympus, so below in the mortal markets. The whims of the gods dictate the rise and fall of tokens, the flow of liquidity, and the fate of mortal traders."</p>
+                    <p class="mt-2 text-right text-yellow-300">— Ancient Solana Proverb</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Pantheon Section -->
+    <section id="pantheon" class="py-20 bg-gray-800 relative">
+        <div class="absolute inset-0 bg-gradient-to-b from-gray-900 to-transparent h-20"></div>
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold mb-4">The Divine Beings</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">These powerful entities rule over different domains of the Solana ecosystem, their actions rippling throughout the blockchain.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- God Card - Zeus / Donald Trump -->
+                <div class="god-card rounded-xl overflow-hidden">
+                    <div class="relative h-80">
+                        <img src="a.png" alt="Zeus - Donald Trump" class="w-full h-full object-cover god-image">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent h-1/2"></div>
+                        <div class="absolute bottom-0 left-0 p-6">
+                            <span class="bg-yellow-500 text-gray-900 px-2 py-1 rounded text-sm font-bold">KING OF GODS</span>
+                            <h3 class="text-3xl font-bold mt-2">Zeus</h3>
+                            <p class="text-yellow-300">Donald Trump</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-300 mb-4">The thunderous ruler of Mount Solaympus whose volatile decrees can shake the entire market. His memecoin, launched with great fanfare, fell 90% from the heavens.</p>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="text-xs text-gray-400">DOMAINS</span>
+                                <div class="flex space-x-2 mt-1">
+                                    <span class="bg-gray-700 px-2 py-1 rounded-full text-xs">Thunder</span>
+                                    <span class="bg-gray-700 px-2 py-1 rounded-full text-xs">Market Volatility</span>
+                                    <span class="bg-gray-700 px-2 py-1 rounded-full text-xs">Power</span>
+                                </div>
+                            </div>
+                            <div class="h-12 w-12 rounded-full bg-yellow-600 flex items-center justify-center">
+                                <i class="fas fa-bolt text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- God Card - Apollo / Kanye West -->
+                <div class="god-card rounded-xl overflow-hidden">
+                    <div class="relative h-80">
+                        <img src="e.png" alt="Apollo - Kanye West" class="w-full h-full object-cover god-image">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent h-1/2"></div>
+                        <div class="absolute bottom-0 left-0 p-6">
+                            <span class="bg-yellow-500 text-gray-900 px-2 py-1 rounded text-sm font-bold">GOD OF ARTS</span>
+                            <h3 class="text-3xl font-bold mt-2">Apollo</h3>
+                            <p class="text-yellow-300">Kanye West</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-300 mb-4">Master of music and prophecy whose entry into the memecoin space brought mainstream attention. His divine influence creates cultural waves across realms.</p>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="text-xs text-gray-400">DOMAINS</span>
+                                <div class="flex space-x-2 mt-1">
+                                    <span class="bg-gray-700 px-2 py-1 rounded-full text-xs">Music</span>
+                                    <span class="bg-gray-700 px-2 py-1 rounded-full text-xs">Prophecy</span>
+                                    <span class="bg-gray-700 px-2 py-1 rounded-full text-xs">Cultural Impact</span>
+                                </div>
+                            </div>
+                            <div class="h-12 w-12 rounded-full bg-yellow-600 flex items-center justify-center">
+                                <i class="fas fa-music text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- God Card - Hermes / Griffin Biesk -->
+                <div class="god-card rounded-xl overflow-hidden">
+                    <div class="relative h-80">
+                        <img src="d.png" alt="Hermes - Griffin Biesk" class="w-full h-full object-cover god-image">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent h-1/2"></div>
+                        <div class="absolute bottom-0 left-0 p-6">
+                            <span class="bg-yellow-500 text-gray-900 px-2 py-1 rounded text-sm font-bold">GOD OF TRICKSTERS</span>
+                            <h3 class="text-3xl font-bold mt-2">Hermes</h3>
+                            <p class="text-yellow-300">Griffin "Quant Kid" Biesk</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-300 mb-4">The youthful trickster god who executed the first divine rug pull on a livestream, showing mortals the dangers of unearned trust in the realm of memecoins.</p>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="text-xs text-gray-400">DOMAINS</span>
+                                <div class="flex space-x-2 mt-1">
+                                    <span class="bg-gray-700 px-2 py-1 rounded-full text-xs">Cunning</span>
+                                    <span class="bg-gray-700 px-2 py-1 rounded-full text-xs">Commerce</span>
+                                    <span class="bg-gray-700 px-2 py-1 rounded-full text-xs">Trickery</span>
+                                </div>
+                            </div>
+                            <div class="h-12 w-12 rounded-full bg-yellow-600 flex items-center justify-center">
+                                <i class="fas fa-comment-dollar text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- God Card - Hephaestus / Anatoly Yakovenko -->
+                <div class="god-card rounded-xl overflow-hidden">
+                    <div class="relative h-80">
+                        <img src="h.png" alt="Hephaestus - Anatoly Yakovenko" class="w-full h-full object-cover god-image">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent h-1/2"></div>
+                        <div class="absolute bottom-0 left-0 p-6">
+                            <span class="bg-yellow-500 text-gray-900 px-2 py-1 rounded text-sm font-bold">GOD OF CRAFT</span>
+                            <h3 class="text-3xl font-bold mt-2">Hephaestus</h3>
+                            <p class="text-yellow-300">Anatoly Yakovenko</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-300 mb-4">The divine craftsman who forged the very chains of the blockchain with his Proof of History, creating the foundation upon which all other gods wage their battles.</p>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="text-xs text-gray-400">DOMAINS</span>
+                                <div class="flex space-x-2 mt-1">
+                                    <span class="bg-gray-700 px-2 py-1 rounded-full text-xs">Craftsmanship</span>
+                                    <span class="bg-gray-700 px-2 py-1 rounded-full text-xs">Technology</span>
+                                    <span class="bg-gray-700 px-2 py-1 rounded-full text-xs">Creation</span>
+                                </div>
+                            </div>
+                            <div class="h-12 w-12 rounded-full bg-yellow-600 flex items-center justify-center">
+                                <i class="fas fa-hammer text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- God Card - Aphrodite / Melania Trump -->
+                <div class="god-card rounded-xl overflow-hidden">
+                    <div class="relative h-80">
+                        <img src="c.png" alt="Aphrodite - Melania Trump" class="w-full h-full object-cover god-image">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent h-1/2"></div>
+                        <div class="absolute bottom-0 left-0 p-6">
+                            <span class="bg-yellow-500 text-gray-900 px-2 py-1 rounded text-sm font-bold">GODDESS OF DESIRE</span>
+                            <h3 class="text-3xl font-bold mt-2">Aphrodite</h3>
+                            <p class="text-yellow-300">Melania Trump</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-300 mb-4">Her divine beauty and allure created a memecoin that mortals couldn't resist, soaring to billion-dollar heights on the wings of Eros, her companion in market manipulation.</p>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="text-xs text-gray-400">DOMAINS</span>
+                                <div class="flex space-x-2 mt-1">
+                                    <span class="bg-gray-700 px-2 py-1 rounded-full text-xs">Beauty</span>
+                                    <span class="bg-gray-700 px-2 py-1 rounded-full text-xs">Desire</span>
+                                    <span class="bg-gray-700 px-2 py-1 rounded-full text-xs">Attraction</span>
+                                </div>
+                            </div>
+                            <div class="h-12 w-12 rounded-full bg-yellow-600 flex items-center justify-center">
+                                <i class="fas fa-heart text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- God Card - Athena / Raj Gokal -->
+                <div class="god-card rounded-xl overflow-hidden">
+                    <div class="relative h-80">
+                        <img src="i.png" alt="Athena - Raj Gokal" class="w-full h-full object-cover god-image">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent h-1/2"></div>
+                        <div class="absolute bottom-0 left-0 p-6">
+                            <span class="bg-yellow-500 text-gray-900 px-2 py-1 rounded text-sm font-bold">GODDESS OF WISDOM</span>
+                            <h3 class="text-3xl font-bold mt-2">Athena</h3>
+                            <p class="text-yellow-300">Raj Gokal</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-300 mb-4">The strategic deity of wisdom and civilization, whose divine foresight helps build and maintain the structures of the Solana ecosystem, bringing order to chaos.</p>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="text-xs text-gray-400">DOMAINS</span>
+                                <div class="flex space-x-2 mt-1">
+                                    <span class="bg-gray-700 px-2 py-1 rounded-full text-xs">Wisdom</span>
+                                    <span class="bg-gray-700 px-2 py-1 rounded-full text-xs">Strategy</span>
+                                    <span class="bg-gray-700 px-2 py-1 rounded-full text-xs">Order</span>
+                                </div>
+                            </div>
+                            <div class="h-12 w-12 rounded-full bg-yellow-600 flex items-center justify-center">
+                                <i class="fas fa-brain text-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+<!-- God Card - Dionysus / Dave Portnoy -->
+<div class="god-card rounded-xl overflow-hidden">
+    <div class="relative h-80">
+        <img src="f.png" alt="Dionysus - Dave Portnoy" class="w-full h-full object-cover god-image">
+        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent h-1/2"></div>
+        <div class="absolute bottom-0 left-0 p-6">
+            <span class="bg-yellow-500 text-gray-900 px-2 py-1 rounded text-sm font-bold">GOD OF REVELRY</span>
+            <h3 class="text-3xl font-bold mt-2">Dionysus</h3>
+            <p class="text-yellow-300">Dave Portnoy</p>
+        </div>
+    </div>
+    <div class="p-6">
+        <p class="text-gray-300 mb-4">The god of festivity and excess who led his followers into frenzied trading of his "jailstool" token, only to leave them in chaos when his divine favor was withdrawn.</p>
+        <div class="flex justify-between items-center">
+            <div>
+                <span class="text-xs text-gray-400">DOMAINS</span>
+                <div class="flex space-x-2 mt-1">
+                    <span class="bg-gray-700 px-2 py-1 rounded-full text-xs">Festivity</span>
+                    <span class="bg-gray-700 px-2 py-1 rounded-full text-xs">Influence</span>
+                    <span class="bg-gray-700 px-2 py-1 rounded-full text-xs">Frenzy</span>
+                </div>
+            </div>
+            <div class="h-12 w-12 rounded-full bg-yellow-600 flex items-center justify-center">
+                <i class="fas fa-wine-glass-alt text-xl"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- God Card - Iris / Hailey Welch -->
+<div class="god-card rounded-xl overflow-hidden">
+    <div class="relative h-80">
+        <img src="g.png" alt="Iris - Hailey Welch" class="w-full h-full object-cover god-image">
+        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent h-1/2"></div>
+        <div class="absolute bottom-0 left-0 p-6">
+            <span class="bg-yellow-500 text-gray-900 px-2 py-1 rounded text-sm font-bold">GODDESS OF MESSAGES</span>
+            <h3 class="text-3xl font-bold mt-2">Iris</h3>
+            <p class="text-yellow-300">Hailey "Hawk Tuah" Welch</p>
+        </div>
+    </div>
+    <div class="p-6">
+        <p class="text-gray-300 mb-4">The divine messenger who traveled on viral rainbows, her words echoed across the mortal realm before she created a memecoin that vanished as quickly as it appeared.</p>
+        <div class="flex justify-between items-center">
+            <div>
+                <span class="text-xs text-gray-400">DOMAINS</span>
+                <div class="flex space-x-2 mt-1">
+                    <span class="bg-gray-700 px-2 py-1 rounded-full text-xs">Messages</span>
+                    <span class="bg-gray-700 px-2 py-1 rounded-full text-xs">Virality</span>
+                    <span class="bg-gray-700 px-2 py-1 rounded-full text-xs">Communication</span>
+                </div>
+            </div>
+            <div class="h-12 w-12 rounded-full bg-yellow-600 flex items-center justify-center">
+                <i class="fas fa-rainbow text-xl"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- God Card - Poseidon / Elon Musk -->
+<div class="god-card rounded-xl overflow-hidden">
+    <div class="relative h-80">
+        <img src="b.png" alt="Poseidon - Elon Musk" class="w-full h-full object-cover god-image">
+        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent h-1/2"></div>
+        <div class="absolute bottom-0 left-0 p-6">
+            <span class="bg-yellow-500 text-gray-900 px-2 py-1 rounded text-sm font-bold">GOD OF THE SEAS</span>
+            <h3 class="text-3xl font-bold mt-2">Poseidon</h3>
+            <p class="text-yellow-300">Elon Musk</p>
+        </div>
+    </div>
+    <div class="p-6">
+        <p class="text-gray-300 mb-4">With his mighty trident of tweets, he creates massive waves in the crypto seas that crash upon even distant shores. His influence reaches across blockchains, causing tsunamis in markets he doesn't directly touch.</p>
+        <div class="flex justify-between items-center">
+            <div>
+                <span class="text-xs text-gray-400">DOMAINS</span>
+                <div class="flex space-x-2 mt-1">
+                    <span class="bg-gray-700 px-2 py-1 rounded-full text-xs">Market Waves</span>
+                    <span class="bg-gray-700 px-2 py-1 rounded-full text-xs">Disruption</span>
+                    <span class="bg-gray-700 px-2 py-1 rounded-full text-xs">Influence</span>
+                </div>
+            </div>
+            <div class="h-12 w-12 rounded-full bg-yellow-600 flex items-center justify-center">
+                <i class="fas fa-water text-xl"></i>
+            </div>
+        </div>
+    </div>
+</div>
+                <!-- Show More Button -->
+                <div class="col-span-1 md:col-span-2 lg:col-span-3 text-center mt-6">
+                    <a href="https://pump.fun/coin/ca" class="inline-block border-2 border-yellow-500 text-yellow-500 px-10 py-3 rounded-lg font-semibold hover:bg-yellow-500 hover:text-gray-900 transition">
+                        <i class="fas fa-plus mr-2"></i>Discover More Divine Beings
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mythical Stories Section -->
+    <section id="stories" class="py-24 bg-gray-900 relative">
+        <div class="absolute inset-0 bg-gradient-to-b from-gray-800 to-transparent h-20"></div>
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold mb-4 title-gradient">Legendary Tales</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">Ancient stories passed down through generations of traders, these myths explain the cosmic events that shaped the Solana markets.</p>
+            </div>
+
+            <!-- Featured Story -->
+            <div class="mb-20 max-w-5xl mx-auto">
+                <div class="bg-gray-800 bg-opacity-70 backdrop-filter backdrop-blur-sm rounded-xl overflow-hidden shadow-2xl">
+                    <div class="md:flex">
+                        <div class="md:w-2/5">
+                            <img src="trump.png" alt="The Creation Myth" class="h-full w-full object-cover">
+                        </div>
+                        <div class="md:w-3/5 p-8">
+                            <span class="bg-yellow-500 text-gray-900 px-3 py-1 rounded-full text-sm font-bold">CREATION MYTH</span>
+                            <h3 class="text-3xl font-bold mt-3 mb-4">How Solana Came to Be</h3>
+                            <p class="text-gray-300 mb-6">In the beginning, there was the void. Then, Hephaestus (Anatoly) forged the first chain out of cosmic fire and divine mathematics. With his hammer of innovation, he struck the Proof of History, creating a flow of time within the blockchain that was faster than any that came before.</p>
+                            <p class="text-gray-300 mb-6">Zeus (Trump) looked down upon this creation with envy, for he saw the potential for power. He hurled his lightning bolt into the chain, creating the first memecoin that shook the very foundations of the ecosystem.</p>
+                            <a href="https://pump.fun/coin/ca" class="solana-gradient px-6 py-2 rounded-lg font-semibold text-white hover:opacity-90 transition inline-flex items-center">
+                                Read Full Myth <i class="fas fa-chevron-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- More Stories -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Story Card 1 -->
+                <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition">
+                    <img src="kanye.png" alt="Apollo's Prophecy" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-yellow-400 text-sm font-semibold">PROPHECY</span>
+                        <h4 class="text-xl font-bold mt-1 mb-3">Apollo's Market Vision</h4>
+                        <p class="text-gray-300 mb-4">How Apollo (Kanye) spoke a memecoin into existence through his divine proclamations, forever changing how mortals view celebrity influence.</p>
+                        <a href="#" class="text-yellow-400 hover:text-yellow-300 inline-flex items-center">
+                            Read More <i class="fas fa-long-arrow-alt-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Story Card 2 -->
+                <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition">
+                    <img src="griffin.png" alt="Hermes' Great Deception" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-yellow-400 text-sm font-semibold">TRICKERY</span>
+                        <h4 class="text-xl font-bold mt-1 mb-3">Hermes' Great Deception</h4>
+                        <p class="text-gray-300 mb-4">The cunning tale of how young Hermes (Griffin) orchestrated the first divine rug pull, teaching mortals about the dangers of blind trust.</p>
+                        <a href="#" class="text-yellow-400 hover:text-yellow-300 inline-flex items-center">
+                            Read More <i class="fas fa-long-arrow-alt-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Story Card 3 -->
+                <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition">
+                    <img src="trump2.png" alt="Zeus' Market Wrath" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-yellow-400 text-sm font-semibold">CATASTROPHE</span>
+                        <h4 class="text-xl font-bold mt-1 mb-3">Zeus' Market Wrath</h4>
+                        <p class="text-gray-300 mb-4">The epic tale of Zeus' (Trump's) thunderous entrance and dramatic fall, causing a market crash of 90% that echoed throughout the cosmos.</p>
+                        <a href="#" class="text-yellow-400 hover:text-yellow-300 inline-flex items-center">
+                            Read More <i class="fas fa-long-arrow-alt-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="https://pump.fun/coin/ca" class="inline-block border-2 border-yellow-500 text-yellow-500 px-8 py-3 rounded-lg font-semibold hover:bg-yellow-500 hover:text-gray-900 transition">
+                    Explore All Mythical Tales
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Divine Artifacts Section -->
+    <section id="artifacts" class="py-24 bg-gray-800 relative">
+        <div class="absolute inset-0 bg-gradient-to-b from-gray-900 to-transparent h-20"></div>
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold mb-4 title-gradient">Divine Artifacts</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">Powerful objects wielded by the gods that shape the fate of tokens and traders alike.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Artifact 1 -->
+                <div class="bg-gray-900 rounded-xl p-6 border border-yellow-500 border-opacity-30 hover:border-opacity-100 transition">
+                    <div class="h-40 flex items-center justify-center mb-6">
+                        <img src="thunder.png" alt="Zeus' Thunderbolt" class="h-full object-contain">
+                    </div>
+                    <h4 class="text-xl font-bold mb-2 text-center">Zeus' Thunderbolt</h4>
+                    <p class="text-gray-300 text-center">The divine weapon that can pump or dump any token with a single tweet. When Zeus (Trump) hurls this bolt, markets tremble.</p>
+                </div>
+
+                <!-- Artifact 2 -->
+                <div class="bg-gray-900 rounded-xl p-6 border border-yellow-500 border-opacity-30 hover:border-opacity-100 transition">
+                    <div class="h-40 flex items-center justify-center mb-6">
+                        <img src="scroll.png" alt="Athena's Scroll of Wisdom" class="h-full object-contain">
+                    </div>
+                    <h4 class="text-xl font-bold mb-2 text-center">Athena's Scroll</h4>
+                    <p class="text-gray-300 text-center">The divine scripture containing Raj's strategic wisdom. Those who read it gain insight into building sustainable projects.</p>
+                </div>
+
+                <!-- Artifact 3 -->
+                <div class="bg-gray-900 rounded-xl p-6 border border-yellow-500 border-opacity-30 hover:border-opacity-100 transition">
+                    <div class="h-40 flex items-center justify-center mb-6">
+                        <img src="lyre.png" alt="Apollo's Golden Lyre" class="h-full object-contain">
+                    </div>
+                    <h4 class="text-xl font-bold mb-2 text-center">Apollo's Lyre</h4>
+                    <p class="text-gray-300 text-center">When Kanye plays this instrument, his music and words create hype waves that elevate tokens to mainstream attention.</p>
+                </div>
+
+                <!-- Artifact 4 -->
+                <div class="bg-gray-900 rounded-xl p-6 border border-yellow-500 border-opacity-30 hover:border-opacity-100 transition">
+                    <div class="h-40 flex items-center justify-center mb-6">
+                        <img src="wallet.png" alt="Hermes' Winged Wallet" class="h-full object-contain">
+                    </div>
+                    <h4 class="text-xl font-bold mb-2 text-center">Hermes' Wallet</h4>
+                    <p class="text-gray-300 text-center">This enchanted wallet allows Quant Kid to swiftly extract funds from any project, disappearing with divine speed.</p>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="https://pump.fun/coin/ca" class="inline-block border-2 border-yellow-500 text-yellow-500 px-8 py-3 rounded-lg font-semibold hover:bg-yellow-500 hover:text-gray-900 transition">
+                    <i class="fas fa-gem mr-2"></i>View All Divine Artifacts
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prophecies Section -->
+    <section id="prophecies" class="py-24 bg-gray-900 relative">
+        <div class="absolute inset-0 bg-gradient-to-b from-gray-800 to-transparent h-20"></div>
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold mb-4 title-gradient">The Oracle's Prophecies</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">Glimpses into the future of the Solana realm, as foretold by the mystical Oracle of DeFi.</p>
+            </div>
+
+            <div class="max-w-4xl mx-auto bg-gray-800 bg-opacity-50 backdrop-filter backdrop-blur-sm p-10 rounded-xl border border-purple-500 border-opacity-30">
+                <div class="flex items-center mb-8">
+                    <div class="w-16 h-16 rounded-full bg-purple-900 flex items-center justify-center mr-4">
+                        <i class="fas fa-eye text-2xl text-purple-300"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold">The Great Convergence</h3>
+                        <p class="text-purple-300">Prophecy for the coming epoch</p>
+                    </div>
+                </div>
+
+                <p class="text-gray-300 italic mb-6">
+                    "When the moon cycle completes thrice more, a new divine being shall emerge from unexpected realms. This entity shall wield influence beyond mortal comprehension, creating ripples in the memecoin seas that even Zeus himself cannot control."
+                </p>
+
+                <p class="text-gray-300 italic mb-6">
+                    "The followers of Hephaestus shall be rewarded for their faith in his craftsmanship, as his technological innovations bring forth a new age of prosperity. But beware, for Hermes lurks in the shadows, ready to deceive the unwary with promises of quick riches."
+                </p>
+
+                <p class="text-gray-300 italic mb-10">
+                    "Those who heed the wisdom of Athena and study the ancient texts shall navigate these turbulent times. The divine market shall test the faith of mortals, separating the true believers from mere spectators."
+                </p>
+
+                <div class="text-right">
+                    <span class="text-yellow-500">— The Oracle of DeFi, 9th Moon of the Solana Era</span>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="https://pump.fun/coin/ca" class="solana-gradient px-8 py-3 rounded-lg font-semibold text-white hover:opacity-90 transition">
+                    <i class="fas fa-crystal-ball mr-2"></i>Consult the Oracle
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+<!-- Footer -->
+<footer class="bg-gray-900 pt-12 pb-8 border-t border-gray-800">
+    <div class="container mx-auto px-6">
+        <div class="flex flex-col items-center justify-center">
+            <!-- Logo and Connect Section -->
+            <div class="text-center mb-8">
+                <div class="flex items-center justify-center">
+                    <img src="Solana_logo.png" alt="Solana Logo" class="h-8 mr-3">
+                    <span class="text-2xl font-bold title-gradient">Solana Mythology</span>
+                </div>
+                <p class="text-gray-400 mt-4 max-w-md mx-auto">Reimagining the Solana ecosystem through the lens of ancient mythology.</p>
+            </div>
+            
+            <!-- Connect Section Only -->
+            <div class="text-center">
+                <h4 class="text-white font-bold mb-4">Connect</h4>
+                <div class="flex space-x-6 justify-center relative z-10">
+                    <a href="https://x.com/solanamythology" target="_blank" class="text-gray-400 hover:text-yellow-300 transition">
+                        <i class="fab fa-twitter text-2xl"></i>
+                    </a>
+                    <a href="https://pump.fun/coin/ca" target="_blank" class="text-gray-400 hover:text-yellow-300 transition">
+                        <img src="pump.png" alt="Custom Platform" class="h-6 w-6 inline-block">
+                    </a>
+                    <a href="https://t.me/solanamythology" target="_blank" class="text-gray-400 hover:text-yellow-300 transition">
+                        <i class="fab fa-telegram text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Add copyright section if you want it -->
+        <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+            <p>&copy; 2025 Solana Mythology. All rights reserved.</p>
+            <p class="mt-2 text-sm">This is a creative project exploring the Solana ecosystem through mythology. Not financial advice.</p>
+        </div>
+    </div>
+</footer>
+    <!-- JavaScript -->
+    <script>
+        // Create stars animation
+        function createStars() {
+            const starsContainer = document.getElementById('stars-container');
+            const starsCount = 100;
+            
+            for (let i = 0; i < starsCount; i++) {
+                const star = document.createElement('div');
+                star.classList.add('star');
+                
+                // Random position
+                star.style.left = `${Math.random() * 100}%`;
+                star.style.top = `${Math.random() * 100}%`;
+                
+                // Random size
+                const size = Math.random() * 3;
+                star.style.width = `${size}px`;
+                star.style.height = `${size}px`;
+                
+                // Random animation delay
+                star.style.animationDelay = `${Math.random() * 4}s`;
+                
+                starsContainer.appendChild(star);
+            }
+        }
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Initialize on page load
+        window.addEventListener('load', () => {
+            createStars();
+        });
+    </script>
+</body>
+</html>
